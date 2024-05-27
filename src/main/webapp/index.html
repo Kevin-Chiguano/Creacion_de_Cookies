@@ -1,59 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Metadatos y configuración del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página -->
     <title>Formulario de Usuario</title>
+    <!-- Estilos CSS internos -->
     <style>
+        /* Estilos generales para el cuerpo de la página */
         body {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            height: 100vh; /* Altura completa de la ventana */
+            margin: 0; /* Eliminar márgenes por defecto */
+            font-family: Arial, sans-serif; /* Fuente de la página */
+            background-color: #f0f0f0; /* Color de fondo */
         }
+        /* Estilos para el contenedor principal del formulario */
         .container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white; /* Fondo blanco */
+            padding: 20px; /* Espacio interior */
+            border-radius: 8px; /* Bordes redondeados */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
         }
+        /* Estilos para los grupos de formulario */
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 15px; /* Espacio inferior entre grupos */
         }
+        /* Estilos para las etiquetas de los campos de formulario */
         .form-group label {
-            display: block;
-            margin-bottom: 5px;
+            display: block; /* Mostrar como bloque */
+            margin-bottom: 5px; /* Espacio inferior */
         }
+        /* Estilos para los campos de entrada */
         .form-group input {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
+            width: 100%; /* Ancho completo del contenedor */
+            padding: 8px; /* Espacio interior */
+            box-sizing: border-box; /* Incluir padding en el tamaño total */
         }
+        /* Estilos para el botón de envío */
         .form-group button {
-            padding: 10px 15px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
+            padding: 10px 15px; /* Espacio interior */
+            background-color: #007BFF; /* Color de fondo azul */
+            color: white; /* Color del texto blanco */
+            border: none; /* Sin borde */
+            border-radius: 4px; /* Bordes redondeados */
+            cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
         }
+        /* Efecto hover para el botón de envío */
         .form-group button:hover {
-            background-color: #0056b3;
+            background-color: #0056b3; /* Color de fondo más oscuro al pasar el cursor */
         }
     </style>
 </head>
 <body>
+<!-- Contenedor principal del formulario -->
 <div class="container">
+    <!-- Título del formulario -->
     <h2>Ingresar Usuario</h2>
+    <!-- Formulario que envía los datos al servlet "Servlet" mediante el método GET -->
     <form action="Servlet" method="GET">
+        <!-- Grupo de formulario para el campo de usuario -->
         <div class="form-group">
+            <!-- Etiqueta para el campo de entrada de usuario -->
             <label for="username">Usuario:</label>
+            <!-- Campo de entrada de texto para el nombre de usuario -->
             <input type="text" id="username" name="username" required>
         </div>
+        <!-- Grupo de formulario para el botón de envío -->
         <div class="form-group">
+            <!-- Botón para enviar el formulario -->
             <button type="submit">Ingresar</button>
         </div>
     </form>
